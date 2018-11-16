@@ -2,7 +2,7 @@
 Wordpress4.9.7の初期インストール環境をdockerで動かす
 
 ## 使用方法
-開始コマンド  
+コンテナの開始  
 `docker-compose up -d`  
 
 コンテナの一括停止  
