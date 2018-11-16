@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+    mysql:
+        image: mysql:5.7
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            - ./config/initdb.d:/docker-entrypoint-initdb.d
+
+    wordpress:
+        image: wordpress:4.9.7-apache
+        links:
+            - mysql
+        ports:
+            - '8080:80'
+        volumes:
+            - .:/var/www/html
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql
+        ports:
+            - 8081:80
+        environment:
+            PMA_ARBITRARY: 1
+            PMA_HOST: mysql
+            PMA_USER: root
+            PMA_PASSWORD: password
