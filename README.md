@@ -19,7 +19,7 @@ PASS： `password`
 Win：http://192.168.99.100:8080  
 Mac：http://localhost:8080  
 
-## サイトの日本語化
+## wp-adminの日本語化
 必要に応じて`Settings - General - Site Language`を変更してください。  
 
 ## phpmyadmin
