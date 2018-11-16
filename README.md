@@ -1,5 +1,5 @@
-# wordpress-4.9.7
-Wordpress4.9.7の初期インストール環境
+# docker-wordpress-4.9.7
+Wordpress4.9.7の初期インストール環境をdockerで動かす
 
 ## 使用方法
 開始コマンド  
